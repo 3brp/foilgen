@@ -158,8 +158,8 @@ def main():
     parser.add_argument("naca", nargs="?", help="NACA 4-digit code, e.g. 2412 or 0012")
     parser.add_argument("--normal", "-n", choices=['X','Y','Z','x','y','z'], help="Axis the airfoil is normal to (that column will be zeros).")
     parser.add_argument("--chord", "-c", type=float, help="Chord length (scaling). If not provided you'll be prompted.")
-    parser.add_argument("--points", "-p", type=int, default=400,
-                        help="TOTAL number of output points desired (combined upper+lower). Default 400. Internally mapped to cosine points per surface.")
+    parser.add_argument("--points", "-p", type=int, default=50,
+                        help="TOTAL number of output points desired (combined upper+lower). Default 50. Internally mapped to cosine points per surface.")
     parser.add_argument("-o", "--output", default="naca_airfoil.txt", help="TXT output filename (default naca_airfoil.txt).")
     parser.add_argument("--plot", "-P", default=None, help="PNG plot filename (default: same base as --output with .png).")
     parser.add_argument("--no-show", action="store_true", help="Do not call plt.show() (useful for scripts/headless runs).")
